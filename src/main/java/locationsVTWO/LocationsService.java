@@ -14,27 +14,25 @@ public class LocationsService
         this.locationDAO = locationDAO;
     }
 
-    List<Location> listLocations()
+    public List<Location> listLocations()
     {
         return locationDAO.findAll();
     }
-    void createLocation(String name, double lat, double lon)
+    public void createLocation(String name, double lat, double lon)
     {
         locationDAO.save(name,lat,lon);
     }
-    Location getLocationById(long id)
+    public Location getLocationById(long id)
     {
         return locationDAO.findById(id);
 
     }
-    void updateLocation(long id, String name, double lat, double lon)
+    public void updateLocation(long id, String name, double lat, double lon)
     {
         locationDAO.update(id,name,lat,lon);
     }
-    void deleteLocation(long id)
+    public void deleteLocation(long id)
     {
         locationDAO.delete(id);
     }
-
-
 }

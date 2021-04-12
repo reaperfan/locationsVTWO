@@ -10,12 +10,12 @@ public class LocationDAO
 {
     private List<Location> locations = Collections.synchronizedList(new ArrayList<>());
 
-    List<Location> findAll()
+    public List<Location> findAll()
     {
         return locations;
     }
 
-    void save(String name, double lat, double lon)
+    public void save(String name, double lat, double lon)
     {
         Location loc = new Location();
         loc.setName(name);
@@ -25,7 +25,7 @@ public class LocationDAO
 
     }
 
-    Location findById(long id)
+    public Location findById(long id)
     {
         for (Location loc : locations)
         {
@@ -36,7 +36,7 @@ public class LocationDAO
         }
         return null;
     }
-    void update(long id, String name, double lat, double lon)
+    public void update(long id, String name, double lat, double lon)
     {
         for (Location loc : locations)
         {
@@ -48,7 +48,7 @@ public class LocationDAO
             }
         }
     }
-    void delete(long id)
+    public void delete(long id)
     {
         Location removeloc = new Location();
         for (Location loc : locations)
