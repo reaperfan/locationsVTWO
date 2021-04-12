@@ -1,4 +1,4 @@
-package locationsVTWO;
+package locations_Web;
 
 public class Location
 {
@@ -6,6 +6,13 @@ public class Location
     private String name;
     private double lat;
     private double lon;
+
+    public Location(String name, double lat, double lon)
+    {
+        this.name = name;
+        this.lat = lat;
+        this.lon = lon;
+    }
 
     public Long getId()
     {
